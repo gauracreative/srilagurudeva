@@ -7,14 +7,14 @@
     "src": "resources/img/rose.png"
   },
   "resources/js/app.css": {
-    "file": "assets/app-eb233cc2.css",
+    "file": "assets/app-6475f235.css",
     "src": "resources/js/app.css"
   },
   "resources/js/app.js": {
     "css": [
-      "assets/app-eb233cc2.css"
+      "assets/app-6475f235.css"
     ],
-    "file": "assets/app-04c30bb9.js",
+    "file": "assets/app-08b0a150.js",
     "imports": [
       "_module.esm-a9f152bb.js"
     ],
@@ -22,7 +22,7 @@
     "src": "resources/js/app.js"
   },
   "resources/js/front.css": {
-    "file": "assets/front-4ff8b89f.css",
+    "file": "assets/front-cb7777d0.css",
     "src": "resources/js/front.css"
   },
   "resources/js/front.js": {
@@ -30,9 +30,9 @@
       "assets/rose-eb73f6fe.png"
     ],
     "css": [
-      "assets/front-4ff8b89f.css"
+      "assets/front-cb7777d0.css"
     ],
-    "file": "assets/front-7359ab4e.js",
+    "file": "assets/front-b8a1f316.js",
     "imports": [
       "_module.esm-a9f152bb.js"
     ],
