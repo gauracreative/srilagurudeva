@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found</title>
+</head>
+<body>
+    <h1>Page Not Found</h1>
+    <p>If you are not redirected automatically, <a id="redirectLink" href="/">click here</a>.</p>
+
+    <script>
+        // Get the current URL path
+        const currentUrl = window.location.href;
+
+        // Function to handle redirections
+        function handleRedirects(redirects) {
+            for (const redirect of redirects) {
+                if (currentUrl === redirect.from) {
+                    const newUrl = redirect.to;
+                    // Update the redirect link for users who do not get redirected automatically
+                    document.getElementById('redirectLink').href = newUrl;
+                    // Redirect to the new URL
+                    window.location.href = newUrl;
+                    return;
+                }
+            }
+            console.log('No redirect found for the current URL:', currentUrl);
+        }
+
+        // Fetch redirects from an external JSON file
+        fetch('/redirects.json')
+            .then(response => response.json())
+            .then(handleRedirects)
+            .catch(error => {
+                console.error('Error fetching redirects:', error);
+            });
+    </script>
+</body>
+</html>
